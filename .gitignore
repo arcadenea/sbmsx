@@ -1,0 +1,7 @@
+*.rom
+*.rel
+*.asm
+*.sym
+*.lst
+sprites/
+
