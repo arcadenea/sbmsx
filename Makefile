@@ -1,4 +1,5 @@
 CC=sdcc
+ASM=sdasz80
 CFLAGS+= --code-loc 0x4020 --data-loc 0xc000 -mz80 --no-std-crt0
 #CFLAGS+= --nogcse 
 #CFLAGS+= --noinvariant 
@@ -24,6 +25,9 @@ $(ROM): main.ihx
 
 %.rel: %.c
 	$(CC) -c $(CFLAGS) $<
+
+%.rel: %.s
+	$(ASM) -o $<
 
 $(CRTOBJ): $(CRTSRC)
 	sdasz80 -o $(CRTOBJ) $(CRTSRC)
