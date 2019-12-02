@@ -3,5 +3,10 @@
 *.asm
 *.sym
 *.lst
+*.ihx
+*.lk
+*.mem
+*.map
+*.noi
 sprites/
 
